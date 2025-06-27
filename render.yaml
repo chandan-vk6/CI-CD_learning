@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: flask-cicd-example
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn --workers 4 --bind 0.0.0.0:5000 app:app"
